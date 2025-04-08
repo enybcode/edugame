@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EduGame - Apprends en Jouant</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduGame - Accueil</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -12,48 +13,49 @@
     <nav>
       <ul>
         <li><a href="#">Accueil</a></li>
-        <li><a href="#">Jeux</a></li>
-        <li><a href="#">À propos</a></li>
-        <li><a href="#">Connexion</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#games">Jeux</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Apprends à coder en t'amusant !</h1>
-        <p>Des jeux pour te former au développement, au SQL et à la cybersécurité.</p>
-        <a href="#" class="btn">Découvrir les jeux</a>
-      </div>
-    </section>
+  <section class="hero">
+    <h1>Apprends à coder en t'amusant !</h1>
+    <p>Mini-jeux, défis, et progression interactive pour maîtriser le dev, le SQL et la cybersécurité.</p>
+    <a href="#start" class="btn">Commencer à jouer</a>
+  </section>
 
-    <section class="intro">
-      <h2>Pourquoi EduGame ?</h2>
-      <p>EduGame, c’est l’alliance entre apprentissage et fun ! Progresse à ton rythme avec des jeux adaptés à ton niveau.</p>
-    </section>
+  <section class="features">
+    <div class="feature">
+      <img src="https://cdn-icons-png.flaticon.com/512/841/841364.png" alt="Gamepad" />
+      <h3>Des mini-jeux fun</h3>
+      <p>Apprends en jouant avec des quizz, énigmes et challenges interactifs.</p>
+    </div>
+    <div class="feature">
+      <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Code" />
+      <h3>Du vrai code</h3>
+      <p>Pratique HTML, SQL, JavaScript et plus, directement dans le navigateur.</p>
+    </div>
+    <div class="feature">
+      <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="Security" />
+      <h3>Cybersécurité</h3>
+      <p>Déjoue des attaques fictives et apprends à sécuriser ton code.</p>
+    </div>
+  </section>
 
-    <section class="games">
-      <h2>Jeux populaires</h2>
-      <div class="game-list">
-        <div class="game-card">
-          <h3>Défie le SQL</h3>
-          <p>Résous des requêtes pour monter en niveau !</p>
-        </div>
-        <div class="game-card">
-          <h3>CodeRunner</h3>
-          <p>Apprends les bases du code avec des mini-défis.</p>
-        </div>
-        <div class="game-card">
-          <h3>Hacker Défense</h3>
-          <p>Teste tes réflexes en sécurité informatique !</p>
-        </div>
-      </div>
-    </section>
-  </main>
+  <section class="intro">
+    <h2>Pourquoi EduGame ?</h2>
+    <p>
+      EduGame est né d’une idée simple : rendre l’apprentissage du développement et de la cybersécurité plus ludique et accessible à tous.<br><br>
+      Finis les cours trop théoriques et les tutos longs comme le bras. Ici, tu apprends en jouant ! Grâce à des mini-jeux interactifs, tu développes des compétences concrètes en HTML, CSS, JavaScript, SQL et même en sécurité informatique.<br><br>
+      Que tu sois débutant ou intermédiaire, EduGame t’aide à progresser à ton rythme, tout en t’amusant. Et comme on est en BTS SLAM, on met le paquet sur la pratique, l’autonomie, et le plaisir d’apprendre.<br><br>
+      Rejoins-nous dans cette aventure, deviens meilleur chaque jour… et surtout, amuse-toi en codant !
+    </p>
+  </section>
 
   <footer>
-    <p>&copy; 2025 EduGame. Tous droits réservés.</p>
+    <p>&copy; 2025 EduGame - Projet BTS SIO SLAM</p>
   </footer>
 </body>
 </html>
