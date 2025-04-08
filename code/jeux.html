@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EduGame - Jeux</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="jeux.css" />
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <header>
     <div class="logo">EduGame</div>
     <nav>
@@ -21,29 +23,39 @@
   </header>
 
   <section class="hero">
-    <h1>Nos Jeux</h1>
-    <p>Explore des jeux interactifs pour apprendre à coder, maîtriser le SQL et améliorer tes compétences en cybersécurité.</p>
+    <h1>Découvre nos jeux</h1>
+    <p>Choisis une catégorie pour apprendre tout en t’amusant !</p>
   </section>
 
-  <section class="game-list">
-    <div class="game">
-      <img src="https://cdn-icons-png.flaticon.com/512/841/841364.png" alt="Gamepad" />
+  <div class="tabs">
+    <button class="tab-button active" data-tab="code">Code</button>
+    <button class="tab-button" data-tab="sql">SQL</button>
+    <button class="tab-button" data-tab="secu">Cybersécurité</button>
+  </div>
+
+  <section id="code" class="tab-content active">
+    <div class="game-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="JS" />
       <h3>Code Quest</h3>
-      <p>Un jeu où tu résous des énigmes en codant ! Pratique JavaScript en répondant à des défis.</p>
+      <p>Résous des défis JavaScript et développe tes réflexes de dev !</p>
       <a href="#" class="btn">Jouer</a>
     </div>
+  </section>
 
-    <div class="game">
-      <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Code" />
+  <section id="sql" class="tab-content">
+    <div class="game-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt="SQL" />
       <h3>SQL Master</h3>
-      <p>Apprends les requêtes SQL à travers des mini-jeux et des missions de bases de données.</p>
+      <p>Apprends les requêtes SQL en résolvant des énigmes de bases de données.</p>
       <a href="#" class="btn">Jouer</a>
     </div>
+  </section>
 
-    <div class="game">
-      <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="Security" />
+  <section id="secu" class="tab-content">
+    <div class="game-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="Cyber" />
       <h3>Hacker Escape</h3>
-      <p>Deviens un expert en cybersécurité en déjouant des attaques informatiques.</p>
+      <p>Déjoue des attaques fictives et apprends à sécuriser ton code.</p>
       <a href="#" class="btn">Jouer</a>
     </div>
   </section>
@@ -51,5 +63,21 @@
   <footer>
     <p>&copy; 2025 EduGame - Projet BTS SIO SLAM</p>
   </footer>
+
+  <script>
+    const buttons = document.querySelectorAll(".tab-button");
+    const contents = document.querySelectorAll(".tab-content");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        buttons.forEach(btn => btn.classList.remove("active"));
+        contents.forEach(tab => tab.classList.remove("active"));
+
+        button.classList.add("active");
+        document.getElementById(button.dataset.tab).classList.add("active");
+      });
+    });
+  </script>
+
 </body>
 </html>
